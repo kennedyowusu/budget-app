@@ -3,19 +3,26 @@
   <nav class="mobile-nav">
     <% if current_user %>
       <ul class="mobile-nav-ul">
+
         <li class="close-x">&#10006;</li>
+
         <li class="mobile-nav-name">
           <i class="material-icons">account_circle</i>
-          <p><%= current_user.name %><?p>
+          <p class="current-user-name"><%= current_user.name %><?p>
         </li>
-        <li class="mobile-nav-li">
+
+        <li class="mobile-nav-li-settings">
           <i class="material-icons">settings</i>
-          <%= link_to "Edit Account", edit_user_registration_path %>
+          <%= link_to "Edit Account", edit_user_registration_path, class: "edit-settings" %>
         </li>
-        <li class="mobile-nav-li">
+
+        <hr class="mobile-nav-li-hr" >
+
+        <li class="mobile-nav-li-logout">
           <i class="material-icons">exit_to_app</i>
-          <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
+          <%= button_to "Sign Out", destroy_user_session_path, class: "logout", method: :delete %>
         </li>
+
       </ul>
     <% end %>
   </nav>
