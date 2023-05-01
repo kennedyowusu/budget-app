@@ -1,15 +1,211 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f2f1;
+}
+
+/* SPLASH PAGE DESIGN STARTS HERE */
+
+.splash-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .splash-page-title {
+    font-size: 2rem;
+    margin-bottom: 10rem;
+  }
+
+  .auth-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .auth-buttons a {
+    display: block;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    background-color: #f0f2f1;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+
+  .auth-buttons a:hover {
+    background-color: #548aca;
+    color: #ffffff;
+  }
+
+  .auth-buttons a:active {
+    background-color: #548aca;
+    color: #ffffff;
+  }
+
+  /* SPLASH PAGE DESIGN ENGS HERE */
+
+  /* REGISTRATION PAGE DESIGN STARTS HERE */
+
+  .auth-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #548aca;
+    height: 80px;
+  }
+
+  .auth-direction {
+    display: flex;
+    align-items: center;
+  }
+
+  .direction a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .auth-logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .submit-btn {
+    margin-left: auto;
+  }
+
+  .submit-text {
+    background-color: #548aca;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .field {
+    margin-bottom: 10px;
+  }
+
+  .field input[type="text"],
+  .field input[type="email"],
+  .field input[type="password"] {
+    width: 100%;
+    height: 50px;
+    padding: 30px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .actions {
+    text-align: center;
+  }
+
+  .sign-up-text {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+    border: none;
+  }
+
+    /* REGISTRATION PAGE DESIGN ENDS HERE */
+
+    /* LOGIN PAGE DESIGN ENDS HERE */
+
+    .forget-password-text {
+      padding: 10px;
+      color: grey;
+      border: none;
+      margin: 20px 100px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* LOGIN PAGE DESIGN STARTS HERE */
+
+/* Mobile menu styles */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #3778c2;
+  z-index: 9999;
+  padding-left: 10px;
+  display: none;
+  flex-direction: column;
+}
+
+.menu--open {
+  display: flex;
+}
+
+.menu-ul {
+  list-style: none;
+}
+
+.menu-li i {
+  font-size: 34px;
+  color: white;
+}
+
+.menu-li {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.menu-li a,
+.menu-li form {
+  border-bottom: 1px solid white;
+  width: 80%;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.menu-li form button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+
+.close-x {
+  text-align: right;
+  font-size: larger;
+  margin: 20px 20px 70px 20px;
+}
+
+.menu-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 10px;
+}
+
+.menu-name i {
+  font-size: 80px;
+}
+
+.menu-name p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+

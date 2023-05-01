@@ -9,11 +9,11 @@
             <i class="material-icons">account_circle</i>
             <p><%= current_user.name %><?p>
           </li>
-          <li class="menu-li">
+          <li class="menu-li"> 
              <i class="material-icons">settings</i>
              <%= link_to "Edit Account", edit_user_registration_path %>
           </li>
-          <li class="menu-li">
+          <li class="menu-li"> 
             <i class="material-icons">exit_to_app</i>
              <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
           </li>
@@ -52,3 +52,5 @@
 </div>
 
 <div class="new-cat"><%= link_to "Add a new category", new_user_group_path(@user) %></div>
+
+

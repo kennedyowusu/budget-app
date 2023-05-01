@@ -10,13 +10,13 @@
             <i class="material-icons">account_circle</i>
             <p><%= current_user.name %><?p>
           </li>
-          <li class="menu-li">
-            <i class="material-icons">settings</i>
-            <%= link_to "Edit Account", edit_user_registration_path %>
+          <li class="menu-li"> 
+             <i class="material-icons">settings</i>
+             <%= link_to "Edit Account", edit_user_registration_path %>
           </li>
-          <li class="menu-li">
+          <li class="menu-li"> 
             <i class="material-icons">exit_to_app</i>
-            <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
+             <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
           </li>
         </ul>
       <% end %>
@@ -31,7 +31,7 @@
 </div>
 <div class = "login-body">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
+    <%= render "devise/shared/error_messages", resource: resource %> 
 
     <div class="field">
       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
