@@ -1,0 +1,65 @@
+<div class="categories-header">
+  <div class="mobile-menu">
+      <%= image_tag("hamburger.png", :alt => "Menu", :class => "ham") %>
+    <nav class="menu">
+      <% if current_user %>
+        <ul class="menu-ul">
+          <li class="close-x">&#10006;</li>
+          <li class="menu-name">
+            <i class="material-icons">account_circle</i>
+            <p><%= current_user.name %><?p>
+          </li>
+          <li class="menu-li">
+             <i class="material-icons">settings</i>
+             <%= link_to "Edit Account", edit_user_registration_path %>
+          </li>
+          <li class="menu-li">
+            <i class="material-icons">exit_to_app</i>
+             <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
+          </li>
+        </ul>
+      <% end %>
+    </nav>
+  </div>
+
+  <div> NEW TRANSACTION</div>
+
+  <%= link_to authenticated_root_path do %>
+    <i class="material-icons">search</i>
+  <% end %>
+</div>
+
+<div class = "login-body">
+  <%= form_with(model: @expense, url: user_expenses_path, local: true) do |form| %>
+    <% if @expense.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
+        <ul>
+          <% @expense.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.text_field :name, autofocus: true,  placeholder: "Name"  %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :amount,   placeholder: "Amount"  %>
+    </div>
+
+    <div class="field-select">
+      <%= form.label :group_ids, " Select atleast one Category:" %>
+      <%= form.select :group_ids, options_from_collection_for_select(@groups, :id, :name), {}, { multiple: true, class: "form-select" } %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Save", class: "splash-button create-category" %>
+    </div>
+
+  <% end %>
+</div>
+
+<div class="new-cat"><%= link_to "Back", :back %></div>
