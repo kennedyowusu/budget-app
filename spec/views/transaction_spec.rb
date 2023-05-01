@@ -27,5 +27,4 @@ RSpec.describe 'Transactions page', type: :feature do
 
     visit new_user_expense_path(@category.author)
   end
-
 end
