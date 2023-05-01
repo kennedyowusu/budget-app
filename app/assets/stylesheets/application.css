@@ -53,9 +53,9 @@ body {
     color: #ffffff;
   }
 
-  /* SPLASH PAGE DESIGN ENGS HERE */
+/* SPLASH PAGE DESIGN ENGS HERE */
 
-  /* REGISTRATION PAGE DESIGN STARTS HERE */
+/* REGISTRATION PAGE DESIGN STARTS HERE */
 
   .auth-header {
     display: flex;
@@ -120,23 +120,24 @@ body {
     border: none;
   }
 
-    /* REGISTRATION PAGE DESIGN ENDS HERE */
+/* REGISTRATION PAGE DESIGN ENDS HERE */
 
-    /* LOGIN PAGE DESIGN ENDS HERE */
+/* LOGIN PAGE DESIGN STARTS HERE */
 
-    .forget-password-text {
-      padding: 10px;
-      color: grey;
-      border: none;
-      margin: 20px 100px;
-      text-align: center;
-      font-size: 18px;
-    }
+  .forget-password-text {
+    padding: 10px;
+    color: grey;
+    border: none;
+    margin: 20px 100px;
+    text-align: center;
+    font-size: 18px;
+  }
 
-    /* LOGIN PAGE DESIGN STARTS HERE */
+/* LOGIN PAGE DESIGN ENDS HERE */
 
-/* Mobile menu styles */
-.menu {
+/* MOBILE MENU DESIGN STARTS HERE */
+
+.mobile-nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -145,31 +146,35 @@ body {
   background-color: #3778c2;
   z-index: 9999;
   padding-left: 10px;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+  display: flex;
   flex-direction: column;
 }
 
 .menu--open {
-  display: flex;
+  visibility: visible;
+  opacity: 1;
 }
 
-.menu-ul {
+.mobile-nav-ul {
   list-style: none;
 }
 
-.menu-li i {
+.mobile-nav-item i {
   font-size: 34px;
   color: white;
 }
 
-.menu-li {
+.mobile-nav-item {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
 }
 
-.menu-li a,
-.menu-li form {
+.mobile-nav-item a,
+.mobile-nav-item form {
   border-bottom: 1px solid white;
   width: 80%;
   text-decoration: none;
@@ -177,7 +182,7 @@ body {
   font-size: 14px;
 }
 
-.menu-li form button {
+.mobile-nav-item form button {
   background-color: transparent;
   border: none;
   color: white;
@@ -187,10 +192,10 @@ body {
 .close-x {
   text-align: right;
   font-size: larger;
-  margin: 20px 20px 70px 20px;
+  margin: 20px 20px 70px;
 }
 
-.menu-name {
+.mobile-nav-name {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,13 +204,14 @@ body {
   gap: 10px;
 }
 
-.menu-name i {
+.mobile-nav-name i {
   font-size: 80px;
 }
 
-.menu-name p {
+.mobile-nav-name p {
   font-size: 14px;
   font-weight: 500;
 }
 
+/* MOBILE MENU ENDS HERE */
 

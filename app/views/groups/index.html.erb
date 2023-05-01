@@ -1,26 +1,6 @@
 <div class="categories-header">
-  <div class="mobile-menu">
-      <%= image_tag("hamburger.png", :alt => "Menu", :class => "ham") %>
-    <nav class="menu">
-      <% if current_user %>
-        <ul class="menu-ul">
-          <li class="close-x">&#10006;</li>
-          <li class="menu-name">
-            <i class="material-icons">account_circle</i>
-            <p><%= current_user.name %><?p>
-          </li>
-          <li class="menu-li"> 
-             <i class="material-icons">settings</i>
-             <%= link_to "Edit Account", edit_user_registration_path %>
-          </li>
-          <li class="menu-li"> 
-            <i class="material-icons">exit_to_app</i>
-             <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
-          </li>
-        </ul>
-      <% end %>
-    </nav>
-  </div>
+
+  <%= render "shared/mobile_menu" %>
 
   <div>CATEGORY</div>
 
@@ -29,28 +9,28 @@
   <% end %>
 </div>
 
-<div class="mr">
+<div class="most-recent">
   <p>Most recent</p>
   <h3>.</h3>
 </div>
 
-<div class="category-container">
+<div class="cate-container">
   <% @groups.each do |group| %>
     <% if current_user.id == group.author_id %>
       <%= link_to user_group_path(group.author, group) do %>
-        <div class="category">
+        <div class="cate">
           <div><%= image_tag group.icon %></div>
-          <div class="category-name">
-            <p class="c-name"> <%= group.name %> </p>
-            <p class="c-time"> <%= group.created_at.strftime("%d %b %Y") %> </p>
+          <div class="cate-data-container">
+            <p class="cate-name"> <%= group.name %> </p>
+            <p class="cate-time"> <%= group.created_at.strftime("%d %b %Y") %> </p>
           </div>
-          <div> <p class="c-amount"> $<%= group.expenses.sum(:amount) %> </p></div>
+          <div> <p class="cate-amount"> $<%= group.expenses.sum(:amount) %> </p></div>
         </div>
       <% end %>
     <% end %>
   <% end %>
 </div>
 
-<div class="new-cat"><%= link_to "Add a new category", new_user_group_path(@user) %></div>
+<div class="create-new-category"><%= link_to "Add a new category", new_user_group_path(@user) %></div>
 
 

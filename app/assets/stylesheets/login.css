@@ -4,17 +4,18 @@
   margin-right: 2px;
 }
 
+/* Header */
 .categories-header {
   display: flex;
-  gap: 5px;
   justify-content: space-between;
-  background-color: #3778c2;
-  font-weight: 500;
-  height: 50px;
-  width: 100%;
   align-items: center;
+  background-color: #3778c2;
   color: #fff;
   padding: 20px 10px 5px 10px;
+}
+
+.categories-header a {
+  color: #fff;
 }
 
 .categories-header a {
@@ -22,18 +23,19 @@
   color: #fff;
 }
 
-.mr {
+/* Most Recent */
+.most-recent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #3778c2;
-  padding: 20px 10px 15px 10px;
   color: #fff;
-  font-size: small;
+  padding: 20px 10px 15px 10px;
+  font-size: 16px;
 }
 
-.mr h3 {
+.most-recent h3 {
   margin-top: -10px;
 }
 
@@ -42,6 +44,7 @@ img {
   margin-right: 2px;
 }
 
+/* Containers */
 .category-container,
 .transaction-container {
   display: flex;
@@ -58,19 +61,19 @@ img {
   height: 53vh;
 }
 
-.category-container::-webkit-scrollbar,
+.cate-container::-webkit-scrollbar,
 .transaction-container::-webkit-scrollbar {
   display: none;
 }
 
-.category-container a {
+.cate-container a {
   text-decoration: none;
   width: 100%;
   color: #434b54;
   font-weight: bold;
 }
 
-.category {
+.cate {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,35 +84,33 @@ img {
   font-size: 14px;
 }
 
-.category div img {
+.cate div img {
   width: 90px;
   height: 90px;
 }
 
-.category-name {
+.cate-data-container {
   width: 50%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
-.c-name {
+.cate-name {
   margin-top: 20px;
   margin-bottom: 20px;
   color: #8b8e90;
   font-size: 15px;
 }
 
-.c-time {
+.cate-time {
   font-size: x-small;
   color: #8b8e90;
 }
 
-.c-amount {
+.cate-amount {
   margin-bottom: 12px;
 }
 
-.new-cat {
+.create-new-category {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -124,7 +125,7 @@ img {
   align-items: center;
 }
 
-.new-cat a {
+.create-new-category a {
   border: #fff 2px solid;
   text-align: center;
   padding: 15px 20px 20px 20px;
