@@ -9,17 +9,17 @@
   <% end %>
 </div>
 
-<div class = "login-body">
+<div class = "">
   <%= form_with model: @group, url: user_groups_path do |form| %>
     <div class="field">
-      <%= form.text_field :name,   placeholder: "Name" %>
+      <%= form.text_field :name,   placeholder: "Enter Name" %>
     </div>
 
     <div class="field">
       <%= form.text_field :icon, placeholder: "Icon link" %>
     </div>
 
-    <%= form.submit "Create Category", class: "splash-button create-category" %>
+    <%= form.submit "Create Category", class: "create-category" %>
   <% end %>
 </div>
 

@@ -9,7 +9,7 @@
   <% end %>
 </div>
 
-<div class = "login-body">
+<div>
   <%= form_with(model: @expense, url: user_expenses_path, local: true) do |form| %>
     <% if @expense.errors.any? %>
       <div id="error_explanation">
@@ -23,23 +23,23 @@
     <% end %>
 
     <div class="field">
-      <%= form.text_field :name, autofocus: true,  placeholder: "Name"  %>
+      <%= form.text_field :name, autofocus: true,  placeholder: "Enter Name"  %>
     </div>
 
     <div class="field">
-      <%= form.text_field :amount,   placeholder: "Amount"  %>
+      <%= form.text_field :amount,   placeholder: "Enter Amount"  %>
     </div>
 
     <div class="field-select">
-      <%= form.label :group_ids, " Select atleast one Category:" %>
+      <%= form.label :group_ids, "Select Atleast One Category:", class: "atleast" %>
       <%= form.select :group_ids, options_from_collection_for_select(@groups, :id, :name), {}, { multiple: true, class: "form-select" } %>
     </div>
 
     <div class="actions">
-      <%= form.submit "Save", class: "splash-button create-category" %>
+      <%= form.submit "Save", class: "create-category save-category" %>
     </div>
 
   <% end %>
 </div>
 
-<div class="new-cat"><%= link_to "Back", :back %></div>
+<div class="go-back-button"><%= link_to "Back", :back %></div>
