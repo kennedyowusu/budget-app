@@ -1,0 +1,33 @@
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class = "auth-header">
+      <div class="auth-direction" >
+        <%= link_to unauthenticated_root_path do %>
+          <i class="material-icons" style="color:white; margin-left: 20px">arrow_back</i>
+        <% end %>
+      </div>
+
+     <%# <div class = "auth-logo">Budget App</div> %>
+
+     <div class="submit-btn">
+      <%= f.submit "Log In", class: "submit-text" %>
+    </div>
+  </div>
+
+  <div class="login-body">
+    <div class="field">
+      <%= f.email_field :email, autocomplete: "email", placeholder: "Enter Email Address" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Enter Password" %>
+    </div>
+
+    <div class="forget-password">
+      <%= f.submit "Forget Password?", class: "forget-password-text" %>
+    </div>
+
+  </div>
+
+<% end %>
