@@ -12,128 +12,164 @@ body {
 /* SPLASH PAGE DESIGN STARTS HERE */
 
 .splash-page-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  .splash-page-title {
-    font-size: 2rem;
-    margin-bottom: 10rem;
-  }
+.splash-page-title {
+  font-size: 2rem;
+  margin-bottom: 10rem;
+}
 
-  .auth-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .auth-buttons a {
-    display: block;
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    text-decoration: none;
-    color: #000000;
-    background-color: #f0f2f1;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    font-weight: bold;
-  }
+.auth-buttons a {
+  display: block;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  background-color: #f0f2f1;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
 
-  .auth-buttons a:hover {
-    background-color: #548aca;
-    color: #ffffff;
-  }
+.go-back-button a {
+  text-decoration: none;
+  color: #000;
+}
 
-  .auth-buttons a:active {
-    background-color: #548aca;
-    color: #ffffff;
-  }
+.create-new-category a {
+  border: #fff 2px solid;
+  text-align: center;
+  padding: 15px 20px 20px 20px;
+  width: 90%;
+  height: 50px;
+  color: white;
+  text-decoration: none;
+}
+
+.cate-container a {
+  text-decoration: none;
+  width: 100%;
+  color: #434b54;
+  font-weight: bold;
+}
+
+.mobile-nav-item a,
+.mobile-nav-item form {
+  border-bottom: 1px solid white;
+  width: 80%;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.categories-header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.direction a {
+  color: #000;
+  text-decoration: none;
+}
+
+.auth-buttons a:hover {
+  background-color: #548aca;
+  color: #fff;
+}
+
+.auth-buttons a:active {
+  background-color: #548aca;
+  color: #fff;
+}
 
 /* SPLASH PAGE DESIGN ENGS HERE */
 
 /* REGISTRATION PAGE DESIGN STARTS HERE */
 
-  .auth-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: #548aca;
-    height: 80px;
-  }
+.auth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #548aca;
+  height: 80px;
+}
 
-  .auth-direction {
-    display: flex;
-    align-items: center;
-  }
+.auth-direction {
+  display: flex;
+  align-items: center;
+}
 
-  .direction a {
-    color: #000000;
-    text-decoration: none;
-  }
+.auth-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
 
-  .auth-logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
+.submit-btn {
+  margin-left: auto;
+}
 
-  .submit-btn {
-    margin-left: auto;
-  }
+.submit-text {
+  background-color: #548aca;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+}
 
-  .submit-text {
-    background-color: #548aca;
-    border-radius: 5px;
-    border: none;
-    padding: 10px;
-    color: #ffffff;
-    font-weight: bold;
-  }
+.field {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 
-  .field {
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%;
+  height: 50px;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
 
-  .field input[type="text"],
-  .field input[type="email"],
-  .field input[type="password"] {
-    width: 100%;
-    height: 50px;
-    padding: 30px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    font-size: 14px;
-  }
+.actions {
+  text-align: center;
+}
 
-  .actions {
-    text-align: center;
-  }
-
-  .sign-up-text {
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 30px;
-    border: none;
-  }
+.sign-up-text {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 30px;
+  border: none;
+}
 
 /* REGISTRATION PAGE DESIGN ENDS HERE */
 
 /* LOGIN PAGE DESIGN STARTS HERE */
 
-  .forget-password-text {
-    padding: 10px;
-    color: grey;
-    border: none;
-    margin: 20px 100px;
-    text-align: center;
-    font-size: 18px;
-  }
+.forget-password-text {
+  padding: 10px;
+  color: grey;
+  border: none;
+  margin: 20px 100px;
+  text-align: center;
+  font-size: 18px;
+}
 
 /* LOGIN PAGE DESIGN ENDS HERE */
 
@@ -173,15 +209,6 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
-}
-
-.mobile-nav-item a,
-.mobile-nav-item form {
-  border-bottom: 1px solid white;
-  width: 80%;
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
 }
 
 .mobile-nav-item form button {
@@ -270,18 +297,21 @@ body {
 .field-select {
   width: 100%;
   padding: 30px;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
   margin-bottom: 10px;
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .form-select {
   width: 100%;
   padding: 70px;
   height: 70%;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
   margin-bottom: 10px;
@@ -293,12 +323,11 @@ body {
   border-radius: 5px;
   border: none;
   padding: 10px;
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
   margin-top: 10px;
   width: 100%;
   height: 50px;
-  font-weight: bold;
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -317,15 +346,6 @@ body {
   background-color: #3778c2;
   color: #fff;
   padding: 20px 10px 5px 10px;
-}
-
-.categories-header a {
-  color: #fff;
-}
-
-.categories-header a {
-  text-decoration: none;
-  color: #fff;
 }
 
 /* Most Recent */
@@ -369,13 +389,6 @@ img {
 .cate-container::-webkit-scrollbar,
 .transaction-container::-webkit-scrollbar {
   display: none;
-}
-
-.cate-container a {
-  text-decoration: none;
-  width: 100%;
-  color: #434b54;
-  font-weight: bold;
 }
 
 .cate {
@@ -430,38 +443,9 @@ img {
   align-items: center;
 }
 
-.create-new-category a {
-  border: #fff 2px solid;
-  text-align: center;
-  padding: 15px 20px 20px 20px;
-  width: 90%;
-  height: 50px;
-  color: white;
-  text-decoration: none;
-}
-
 .material-icons {
   font-size: 54px;
   color: white;
-}
-
-.create-category {
-  padding: 10px;
-  border: none;
-  margin-top: 50px;
-}
-
-.form-select {
-  height: 50px;
-  width: 100%;
-  border: #bfbbbb solid 1px;
-  padding: 2% 4%;
-}
-
-.field-select {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
 }
 
 .field-select label {
@@ -470,10 +454,10 @@ img {
 }
 
 .go-back-button {
-  border: 1px solid #000000;
+  border: 1px solid #000;
   padding: 10px;
   border-radius: 5px;
-  color: #000000;
+  color: #000;
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
@@ -483,22 +467,16 @@ img {
   text-decoration: none;
 }
 
-.go-back-button a {
-  text-decoration: none;
-  color: #000000;
-}
-
 .create-category {
   background-color: #548aca;
   border-radius: 5px;
-  border: none;
-  padding: 10px;
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
-  margin-top: 10px;
   width: 100%;
   height: 50px;
-  font-weight: bold;
   font-size: 18px;
   margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  margin-top: 50px;
 }
