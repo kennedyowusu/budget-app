@@ -1,15 +1,482 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f2f1;
+  font-family: "Roboto", sans-serif;
+}
+
+/* SPLASH PAGE DESIGN STARTS HERE */
+
+.splash-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.splash-page-title {
+  font-size: 2rem;
+  margin-bottom: 10rem;
+}
+
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-buttons a {
+  display: block;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  background-color: #f0f2f1;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.go-back-button a {
+  text-decoration: none;
+  color: #000;
+}
+
+.create-new-category a {
+  border: #fff 2px solid;
+  text-align: center;
+  padding: 15px 20px 20px 20px;
+  width: 90%;
+  height: 50px;
+  color: white;
+  text-decoration: none;
+}
+
+.cate-container a {
+  text-decoration: none;
+  width: 100%;
+  color: #434b54;
+  font-weight: bold;
+}
+
+.mobile-nav-item a,
+.mobile-nav-item form {
+  border-bottom: 1px solid white;
+  width: 80%;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.categories-header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.direction a {
+  color: #000;
+  text-decoration: none;
+}
+
+.auth-buttons a:hover {
+  background-color: #548aca;
+  color: #fff;
+}
+
+.auth-buttons a:active {
+  background-color: #548aca;
+  color: #fff;
+}
+
+/* SPLASH PAGE DESIGN ENGS HERE */
+
+/* REGISTRATION PAGE DESIGN STARTS HERE */
+
+.auth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #548aca;
+  height: 80px;
+}
+
+.auth-direction {
+  display: flex;
+  align-items: center;
+}
+
+.auth-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.submit-btn {
+  margin-left: auto;
+}
+
+.submit-text {
+  background-color: #548aca;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.field {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%;
+  height: 50px;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.actions {
+  text-align: center;
+}
+
+.sign-up-text {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 30px;
+  border: none;
+}
+
+/* REGISTRATION PAGE DESIGN ENDS HERE */
+
+/* LOGIN PAGE DESIGN STARTS HERE */
+
+.forget-password-text {
+  padding: 10px;
+  color: grey;
+  border: none;
+  margin: 20px 100px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* LOGIN PAGE DESIGN ENDS HERE */
+
+/* MOBILE MENU DESIGN STARTS HERE */
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background-color: #3778c2;
+  z-index: 9999;
+  padding-left: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu--open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobile-nav-ul {
+  list-style: none;
+}
+
+.mobile-nav-item i {
+  font-size: 34px;
+  color: white;
+}
+
+.mobile-nav-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.mobile-nav-item form button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+
+.close-x {
+  text-align: right;
+  font-size: larger;
+  margin: 20px 20px 70px;
+}
+
+.mobile-nav-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 10px;
+}
+
+.mobile-nav-name i {
+  font-size: 80px;
+}
+
+.mobile-nav-name p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mobile-nav-li-settings,
+.mobile-nav-li-logout {
+  display: flex;
+  margin: 20px 0;
+  justify-content: flex-start;
+}
+
+.edit-settings,
+.logout {
+  margin-left: 30px;
+  color: white;
+  margin-top: 2px;
+  font-size: 18px;
+}
+
+.edit-settings {
+  font-size: 14px;
+}
+
+.logout {
+  background: transparent;
+  border: none;
+}
+
+.mobile-nav-li-hr {
+  display: flex;
+  margin: 20px 0;
+  justify-content: flex-start;
+  height: 2px;
+  background: white;
+  width: 80%;
+}
+
+.current-user-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 10px;
+  color: white;
+}
+
+/* MOBILE MENU DESIGN ENDS HERE */
+
+.atleast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.field-select {
+  width: 100%;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-select {
+  width: 100%;
+  padding: 70px;
+  height: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.save-category {
+  background-color: #548aca;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.ham {
+  width: 30px;
+  filter: brightness(0) invert(1);
+  margin-right: 2px;
+}
+
+/* Header */
+.categories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3778c2;
+  color: #fff;
+  padding: 20px 10px 5px 10px;
+}
+
+/* Most Recent */
+.most-recent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3778c2;
+  color: #fff;
+  padding: 20px 10px 15px 10px;
+  font-size: 16px;
+}
+
+.most-recent h3 {
+  margin-top: -10px;
+}
+
+img {
+  width: 30px;
+  margin-right: 2px;
+}
+
+/* Containers */
+.category-container,
+.transaction-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: transparent;
+  padding: 10px;
+  width: 100%;
+  height: 70vh;
+  overflow-y: auto;
+}
+
+.transaction-container {
+  height: 53vh;
+}
+
+.cate-container::-webkit-scrollbar,
+.transaction-container::-webkit-scrollbar {
+  display: none;
+}
+
+.cate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.cate div img {
+  width: 90px;
+  height: 90px;
+}
+
+.cate-data-container {
+  width: 50%;
+  justify-content: center;
+}
+
+.cate-name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #8b8e90;
+  font-size: 15px;
+}
+
+.cate-time {
+  font-size: x-small;
+  color: #8b8e90;
+}
+
+.cate-amount {
+  margin-bottom: 12px;
+}
+
+.create-new-category {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #5fb523;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.material-icons {
+  font-size: 54px;
+  color: white;
+}
+
+.field-select label {
+  font-size: small;
+  margin: 10px 0 5px 4%;
+}
+
+.go-back-button {
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  width: 25%;
+  text-decoration: none;
+}
+
+.create-category {
+  background-color: #548aca;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  margin-top: 50px;
+}

@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BudgetApp</title>
+    <title>Budget App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   </head>
 
   <body>
     <%= yield %>
   </body>
 </html>
+
+<script>
+  function initMenu() {
+    const ham = document.querySelector('.ham');
+    const menu = document.querySelector('.mobile-nav');
+
+    ham.addEventListener('click', () => {
+      menu.classList.toggle('menu--open');
+    });
+
+    const closeMenuBtn = document.querySelector('.close-x');
+    closeMenuBtn.classList.add("close-menu");
+
+    closeMenuBtn.addEventListener("click", () => {
+      menu.classList.toggle('menu--open');
+    });
+  }
+
+  initMenu();
+</script>
+
+

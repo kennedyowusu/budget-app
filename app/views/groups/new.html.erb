@@ -1,0 +1,26 @@
+<div class="categories-header">
+
+  <%= render "shared/mobile_menu" %>
+
+  <div> NEW CATEGORY</div>
+
+  <%= link_to authenticated_root_path do %>
+    <i class="material-icons">search</i>
+  <% end %>
+</div>
+
+<div class = "">
+  <%= form_with model: @group, url: user_groups_path do |form| %>
+    <div class="field">
+      <%= form.text_field :name,   placeholder: "Enter Name" %>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :icon, placeholder: "Icon link" %>
+    </div>
+
+    <%= form.submit "Create Category", class: "create-category" %>
+  <% end %>
+</div>
+
+<div class="create-new-category"><%= link_to "Back to categories",  authenticated_root_path %></div>

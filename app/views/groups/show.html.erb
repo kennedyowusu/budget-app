@@ -1,0 +1,47 @@
+<div class="categories-header">
+
+  <%= render "shared/mobile_menu" %>
+
+  <div>TRANSACTIONS</div>
+
+  <%= link_to authenticated_root_path do %>
+    <p> BACK </p>
+  <% end %>
+</div>
+
+<div class="most-recent">
+  <p>Most recent</p>
+  <h3>.</h3>
+</div>
+
+
+<div class="cate">
+  <div><%= image_tag @group.icon %></div>
+  <div class="cate-data-container">
+    <p class="cate-name"> <%= @group.name %> </p>
+    <p class="cate-time"> <%= @group.created_at.strftime("%d %b %Y") %> </p>
+  </div>
+  <div> <p class="cate-amount"> $<%= @group.expenses.sum(:amount) %> </p></div>
+</div>
+
+
+
+<div class="transaction-container">
+  <% @group.expenses.order(created_at: :desc).each do |expense| %>
+    <% if current_user.id == expense.author_id %>
+        <div class="cate">
+          <div class="cate-data-container">
+            <p class="cate-name"> <%= expense.name %> </p>
+            <p class="cate-time"> <%= expense.created_at.strftime("%d %b %Y") %> </p>
+          </div>
+          <div> <p class="cate-amount"> $<%= expense.amount %> </p></div>
+        </div>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="create-new-category"><%= link_to "Add a new transaction", new_user_expense_path(@group.author) %></div>
+
+
+
+
