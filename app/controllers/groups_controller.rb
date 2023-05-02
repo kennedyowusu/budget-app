@@ -1,21 +1,21 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_group, only: [:show]
+
   def index
     @groups = Group.order(created_at: :desc).all
     @user = current_user
   end
 
   def show
-    @group = Group.find(params[:id])
   end
 
   def new
-    @group = Group.new
+    @group = current_user.groups.build
   end
 
   def create
-    @group = Group.new(group_params)
-    @group.author_id = current_user.id
+    @group = current_user.groups.build(group_params)
     if @group.save
       redirect_to authenticated_root_path, notice: 'Group was successfully created.'
     else
@@ -25,7 +25,12 @@ class GroupsController < ApplicationController
 
   private
 
+  def set_group
+    @group = Group.find(params[:id])
+  end
+
   def group_params
     params.require(:group).permit(:name, :icon)
   end
 end
+

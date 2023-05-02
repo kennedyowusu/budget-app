@@ -27,8 +27,11 @@
 
 
 <div class="transaction-container">
-  <% @group.expenses.order(created_at: :desc).each do |expense| %>
-    <% if current_user.id == expense.author_id %>
+  <% if @group.expenses.empty? %>
+    <p style="color: green; font-size: 20px; text-align: center;">No Transactions Available</p>
+  <% else %>
+    <% @group.expenses.order(created_at: :desc).each do |expense| %>
+      <% if current_user.id == expense.author_id %>
         <div class="cate">
           <div class="cate-data-container">
             <p class="cate-name"> <%= expense.name %> </p>
@@ -36,6 +39,7 @@
           </div>
           <div> <p class="cate-amount"> $<%= expense.amount %> </p></div>
         </div>
+      <% end %>
     <% end %>
   <% end %>
 </div>

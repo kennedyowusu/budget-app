@@ -1,5 +1,4 @@
 class Expense < ApplicationRecord
-  # has_and_belongs_to_many :groups
   has_and_belongs_to_many :groups, join_table: :join_group_and_expenses
   belongs_to :author, class_name: 'User'
 

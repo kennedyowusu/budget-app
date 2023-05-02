@@ -4,9 +4,9 @@ RSpec.describe 'Transactions page', type: :feature do
   before :each do
     @user = User.create(
       id: 1,
-      name: 'John',
-      email: 'john@example.com',
-      password: 'password'
+      name: 'Kennedy',
+      email: 'kennedy@test.com',
+      password: '123456789'
     )
 
     visit new_user_session_path
@@ -15,13 +15,13 @@ RSpec.describe 'Transactions page', type: :feature do
     fill_in 'Password', with: @user.password
     click_button 'Log in'
 
-    @category = Group.new(name: 'Food', icon: 'nil', author: @user)
+    @category = Group.new(name: 'Posh Cars', icon: 'nil', author: @user)
     @category.save
 
-    @groceries = Group.create(name: 'Groceries',
-                              icon: 'https://www.pngmart.com/files/11/Shopping-Bag-PNG-Free-Download.png', author: @user)
+    @groceries = Group.create(name: 'Posh Cars',
+                              icon: 'https://images.unsplash.com/photo-1680768806957-f287b79124ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80', author: @user)
 
-    @transaction = Expense.new(name: 'Food', amount: 100, author_id: @user.id)
+    @transaction = Expense.new(name: 'Toyota', amount: 100, author_id: @user.id)
     @transaction.groups << @groceries
     @transaction.save
 

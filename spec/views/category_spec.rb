@@ -5,7 +5,7 @@ RSpec.describe 'groups page', type: :feature do
     @user = User.create(
       name: 'Kennedy',
       email: 'kennedy@test.com',
-      password: 'password'
+      password: '123456789'
     )
 
     visit new_user_session_path
