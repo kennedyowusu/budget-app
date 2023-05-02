@@ -7,8 +7,7 @@ class GroupsController < ApplicationController
     @user = current_user
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @group = current_user.groups.build
@@ -33,4 +32,3 @@ class GroupsController < ApplicationController
     params.require(:group).permit(:name, :icon)
   end
 end
-
