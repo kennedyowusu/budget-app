@@ -2,21 +2,25 @@
 <div class="categories-header">
   <div class="mobile-menu">
       <%= image_tag("hamburger.png", :alt => "Menu", :class => "ham") %>
-    <nav class="menu">
+    <nav class="mobile-nav">
       <% if current_user %>
-        <ul class="menu-ul">
+        <ul class="mobile-nav-ul">
           <li class="close-x">&#10006;</li>
-          <li class="menu-name">
+          <li class="mobile-nav-name">
             <i class="material-icons">account_circle</i>
             <p><%= current_user.name %><?p>
           </li>
-          <li class="menu-li"> 
+
+          <li class="mobile-nav-li-settings">
              <i class="material-icons">settings</i>
-             <%= link_to "Edit Account", edit_user_registration_path %>
+             <%= link_to "Edit Account", edit_user_registration_path, class: "edit-settings" %>
           </li>
-          <li class="menu-li"> 
+
+          <hr class="mobile-nav-li-hr" >
+
+          <li class="mobile-nav-li-logout">
             <i class="material-icons">exit_to_app</i>
-             <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
+            <%= button_to "Sign Out", destroy_user_session_path, class: "logout", method: :delete %>
           </li>
         </ul>
       <% end %>
@@ -31,7 +35,7 @@
 </div>
 <div class = "login-body">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %> 
+    <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field">
       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
@@ -54,12 +58,9 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Update", class: "splash-button create-category" %>
+      <%= f.submit "Update", class: "create-category" %>
     </div>
   <% end %>
 </div>
 
-
-<div class = "unhappy">Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "splash-button create-category"  %></div>
-
-<div class="new-cat"><%= link_to "Back", :back %></div>
+<div class="create-new-category"><%= link_to "Back", :back %></div>

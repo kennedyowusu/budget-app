@@ -85,6 +85,11 @@ body {
   text-decoration: none;
 }
 
+.auth-login-btn {
+  background-color: #548aca;
+  color: #fff;
+}
+
 .auth-buttons a:hover {
   background-color: #548aca;
   color: #fff;
